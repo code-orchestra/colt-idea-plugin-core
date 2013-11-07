@@ -5,8 +5,23 @@ package codeOrchestra.colt.core.rpc.model;
  */
 public abstract class ColtRemoteProject {
 
-    public abstract String getPath();
+    private String path;
 
-    public abstract String getName();
+    private String name;
 
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
