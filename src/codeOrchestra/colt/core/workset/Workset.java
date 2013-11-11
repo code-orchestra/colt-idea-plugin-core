@@ -1,9 +1,9 @@
 package codeOrchestra.colt.core.workset;
 
-import utils.XMLUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+import utils.XMLUtils;
 
 import javax.xml.transform.TransformerException;
 import java.io.File;

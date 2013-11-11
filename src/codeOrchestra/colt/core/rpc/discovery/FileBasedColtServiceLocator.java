@@ -2,11 +2,11 @@ package codeOrchestra.colt.core.rpc.discovery;
 
 import codeOrchestra.colt.core.rpc.ColtRemoteService;
 import codeOrchestra.colt.core.storage.ProjectStorageHelper;
-import utils.FileUtils;
-import utils.StringUtils;
 import com.googlecode.jsonrpc4j.JsonRpcHttpClient;
 import com.googlecode.jsonrpc4j.ProxyUtil;
 import com.intellij.openapi.project.Project;
+import utils.FileUtils;
+import utils.StringUtils;
 
 import java.io.File;
 import java.net.MalformedURLException;
