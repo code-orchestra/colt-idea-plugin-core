@@ -5,6 +5,10 @@ package codeOrchestra.colt.core;
  */
 public interface ColtFacade {
 
+    String getRequestorCode();
+
     void startLive();
+
+    void startProduction();
 
 }

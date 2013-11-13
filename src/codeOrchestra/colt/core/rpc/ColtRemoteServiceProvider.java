@@ -1,5 +1,6 @@
 package codeOrchestra.colt.core.rpc;
 
+import codeOrchestra.colt.core.ColtFacade;
 import codeOrchestra.colt.core.plugin.ColtSettings;
 import codeOrchestra.colt.core.plugin.launch.ColtLauncher;
 import codeOrchestra.colt.core.plugin.launch.ColtPathNotConfiguredException;
@@ -110,7 +111,7 @@ public class ColtRemoteServiceProvider extends AbstractProjectComponent implemen
     private boolean makeNewSecurityToken(boolean newRequest) {
         if (newRequest) {
             try {
-                coltRemoteService.requestShortCode("IDEA Plugin");
+                coltRemoteService.requestShortCode(getRequestor());
             } catch (ColtRemoteTransferableException e) {
                 Messages.showErrorDialog("Can't request an authorization key from COLT.\nMake sure COLT is active and running", COLT_TITLE);
                 return false;
@@ -152,6 +153,10 @@ public class ColtRemoteServiceProvider extends AbstractProjectComponent implemen
         }
 
         return false;
+    }
+
+    private String getRequestor() {
+        return myProject.getComponent(ColtFacade.class).getRequestorCode();
     }
 
     @Override

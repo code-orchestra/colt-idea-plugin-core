@@ -38,6 +38,8 @@ public abstract class AbstractColtRemoteAction<S extends ColtRemoteService> exte
         } else {
             e.getPresentation().setEnabled(false);
         }
+
+        e.getPresentation().setVisible(true);
     }
 
     @Override
